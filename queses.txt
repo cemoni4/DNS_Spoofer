@@ -1,0 +1,5 @@
+iptables --flush
+iptables -I INPUT -j NFQUEUE --queue-num 0
+iptables -I OUTPUT -j NFQUEUE --queue-num 0
+# for mitm mode
+#iptables -I FORWARD -j NFQUEUE --queue-num 0
